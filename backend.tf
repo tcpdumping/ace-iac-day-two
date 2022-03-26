@@ -1,7 +1,7 @@
 terraform {
-  required_version = ">= 1.0.2"
+  required_version = ">= 1.1.0"
   backend "remote" {
-     organization = "tcpdumping"
+    organization = "tcpdumping"
     workspaces {
       name = "ace-iac-day-two"
     }
