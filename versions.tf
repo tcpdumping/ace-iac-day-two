@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aviatrix = {
-      source  = "aviatrix.com/aviatrix/aviatrix"
+      source  = "AviatrixSystems/aviatrix"
       version = "2.21.1"
     }
     aws = {
