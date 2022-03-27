@@ -9,7 +9,7 @@ resource "aviatrix_fqdn" "fqdn_filter" {
   fqdn_mode    = "white"
   fqdn_enabled = true
   gw_filter_tag_list {
-    gw_name = data.aviatrix_gateway.var.egress.gw_name
+    gw_name = data.var.egress.gw_name
   }
   manage_domain_names = false
 }
