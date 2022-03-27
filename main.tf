@@ -1,15 +1,15 @@
 // ACE-IAC Git Aviatrix Infrastructure
 
-data "aviatrix_gateway" "egress" {
-  gw_name = var.azure_spoke2_name
-}
+#data "aviatrix_gateway" "egress" {
+#  gw_name = var.azure_spoke2_name
+#}
 
 resource "aviatrix_fqdn" "fqdn_filter" {
   fqdn_tag     = "APP-RULES"
   fqdn_mode    = "white"
   fqdn_enabled = true
   gw_filter_tag_list {
-    gw_name = data.aviatrix_gateway.egress.gw_name
+    gw_name = var.azure_spoke2_name
   }
   manage_domain_names = false
 }
